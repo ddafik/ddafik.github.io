@@ -6,9 +6,6 @@ node_modules/
 .env.local
 .env.production
 
-# Build output (GitHub Pages static site)
-docs/
-
 # IDE and Editor files
 .vscode/
 .idea/

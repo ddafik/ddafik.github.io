@@ -4,7 +4,7 @@ nama_lengkap: "Prof. Drs. Dafik, M.Sc., Ph.D"
 nama_singkat: "Prof. Dafik"
 gelar_akademik: "Guru Besar"
 universitas: "Universitas Jember"
-foto_profil: "/profile_pic.png"
+foto_profil: "profile_pic.png"
 
 # Badges / Label
 badges:

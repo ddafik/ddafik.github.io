@@ -340,6 +340,17 @@ function buildStaticSite() {
     const templatePath = path.join(__dirname, "public", "index.html");
     let html = fs.readFileSync(templatePath, "utf-8");
 
+    // Extract the render functions from the original script
+    const scriptContent = html.match(/<script>([\s\S]*?)<\/script>/)[1];
+    const renderFunctionsStart = scriptContent.indexOf("// RENDER FUNCTIONS");
+
+    let renderFunctionsCode = "";
+    if (renderFunctionsStart !== -1) {
+        renderFunctionsCode = scriptContent.substring(renderFunctionsStart);
+    } else {
+        console.error("⚠️ Could not find RENDER FUNCTIONS in script!");
+    }
+
     // Create embedded data script
     const dataScript = `
     <script id="embedded-data">
@@ -356,27 +367,38 @@ function buildStaticSite() {
     </script>
   `;
 
-    // Replace the API loading script with embedded data
-    html = html.replace(
-        /<script>\s*\/\/ ={70,}\s*\/\/ LOAD ALL CONTENT FROM API[\s\S]*?<\/script>/,
-        dataScript +
-        `
+    // Create the new main script
+    const newMainScript = `
     <script>
       // Load content from embedded data instead of API
       async function loadAllContent() {
         try {
           const data = window.__SITE_DATA__;
-          renderBio(data.bio);
-          renderPositions(data.positions);
-          renderPublications(data.publications);
-          renderContact(data.contact);
+          console.log("Loading content from embedded data...", data);
+          if (typeof renderBio === 'function') renderBio(data.bio);
+          if (typeof renderPositions === 'function') renderPositions(data.positions);
+          if (typeof renderPublications === 'function') renderPublications(data.publications);
+          if (typeof renderContact === 'function') renderContact(data.contact);
         } catch (error) {
           console.error("Error loading content:", error);
         }
       }
       
-      // Keep all render functions from original
-    `
+      ${renderFunctionsCode}
+      
+      // Load content on page load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', loadAllContent);
+      } else {
+        loadAllContent();
+      }
+    </script>
+    `;
+
+    // Replace the entire original script with our new scripts
+    html = html.replace(
+        /<script>[\s\S]*?<\/script>/,
+        dataScript + "\n" + newMainScript
     );
 
     // Create docs directory if it doesn't exist
