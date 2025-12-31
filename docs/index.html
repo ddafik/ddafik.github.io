@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Prof. Drs. Dafik, M.Sc., Ph.D - Profil Akademik</title>
+  <meta name="description"
+    content="Profil akademik Prof. Drs. Dafik, M.Sc., Ph.D - Guru Besar Matematika, Dekan FMIPA UNEJ, Ketua Research Group CGANT" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#137fec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display">
+  <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] bg-white/90 backdrop-blur-md px-10 py-3 dark:border-b-gray-800 dark:bg-background-dark/90">
+      <div class="flex items-center gap-4 text-[#111418] dark:text-white">
+        <div class="size-8 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
+          <span class="material-symbols-outlined">school</span>
+        </div>
+        <h2 id="header-name" class="text-lg font-bold leading-tight tracking-[-0.015em]">
+          Prof. Dafik
+        </h2>
+      </div>
+      <div class="flex flex-1 justify-end gap-8">
+        <nav class="hidden md:flex items-center gap-9">
+          <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors"
+            href="#tentang">Tentang</a>
+          <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors"
+            href="#kepemimpinan">Kepemimpinan</a>
+          <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors"
+            href="#publikasi">Publikasi</a>
+          <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors"
+            href="#kontak">Kontak</a>
+        </nav>
+        <a id="cv-download-btn" href="#"
+          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-blue-600 transition-colors shadow-sm">
+          <span class="truncate">Unduh CV</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main class="layout-container flex h-full grow flex-col items-center">
+      <!-- Hero Section -->
+      <section class="w-full px-4 md:px-40 py-12 flex justify-center" id="tentang">
+        <div class="flex flex-col max-w-[960px] flex-1">
+          <div class="@container">
+            <div
+              class="flex flex-col gap-8 px-4 py-6 @[480px]:gap-12 @[864px]:flex-row items-center @[864px]:items-start">
+              <div class="relative group">
+                <div id="profile-photo"
+                  class="w-48 h-48 @[480px]:w-64 @[480px]:h-64 bg-top bg-no-repeat bg-cover rounded-full shadow-xl ring-4 ring-white dark:ring-gray-800 object-cover"
+                  alt="Foto Profil Prof. Dafik" style="background-image: url('/profile_pic.png')"></div>
+                <div
+                  class="absolute bottom-2 right-2 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg text-primary">
+                  <span class="material-symbols-outlined text-2xl">verified</span>
+                </div>
+              </div>
+              <div class="flex flex-col gap-6 flex-1 text-center @[864px]:text-left justify-center">
+                <div class="flex flex-col gap-3">
+                  <div id="badges-container"
+                    class="inline-flex items-center justify-center @[864px]:justify-start gap-2 flex-wrap">
+                    <!-- Badges will be loaded dynamically -->
+                  </div>
+                  <h1 id="full-name"
+                    class="text-[#111418] dark:text-white text-3xl font-black leading-tight tracking-[-0.033em] @[480px]:text-4xl">
+                    <!-- Name loaded dynamically -->
+                  </h1>
+                  <h2 id="subtitle" class="text-gray-600 dark:text-gray-300 text-lg font-normal leading-relaxed">
+                    <!-- Subtitle loaded dynamically -->
+                  </h2>
+                </div>
+
+                <!-- Bio Section -->
+                <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-5 text-left">
+                  <p id="bio-content" class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                    <!-- Bio loaded dynamically -->
+                  </p>
+                </div>
+
+                <div class="flex flex-wrap gap-3 justify-center @[864px]:justify-start">
+                  <a href="#publikasi"
+                    class="flex min-w-[84px] cursor-pointer items-center justify-center gap-2 rounded-lg h-12 px-6 bg-primary text-white text-base font-bold hover:bg-blue-600 transition-all hover:scale-105 shadow-md">
+                    <span class="material-symbols-outlined text-[20px]">menu_book</span>
+                    <span class="truncate">Lihat Penelitian</span>
+                  </a>
+                  <a href="#kontak"
+                    class="flex min-w-[84px] cursor-pointer items-center justify-center gap-2 rounded-lg h-12 px-6 bg-white border border-gray-200 text-[#111418] text-base font-bold hover:bg-gray-50 transition-all hover:scale-105 shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700">
+                    <span class="material-symbols-outlined text-[20px]">mail</span>
+                    <span class="truncate">Hubungi Saya</span>
+                  </a>
+                </div>
+                <div id="social-links" class="flex gap-4 justify-center @[864px]:justify-start mt-2">
+                  <!-- Social links loaded dynamically -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Leadership & Service Section -->
+      <section class="w-full px-4 md:px-40 py-8 bg-white dark:bg-background-dark" id="kepemimpinan">
+        <div class="flex justify-center">
+          <div class="flex flex-col max-w-[960px] flex-1">
+            <div class="flex items-center gap-3 px-4 pb-6 pt-5">
+              <div class="h-8 w-1 bg-purple-500 rounded-full"></div>
+              <h2 class="text-[#111418] dark:text-white text-[28px] font-bold leading-tight tracking-[-0.015em]">
+                Kepemimpinan & Jabatan
+              </h2>
+            </div>
+            <div id="positions-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+              <!-- Positions will be loaded dynamically -->
+              <div class="text-center py-8 text-gray-500 col-span-full">
+                <span class="material-symbols-outlined text-4xl animate-spin">progress_activity</span>
+                <p class="mt-2">Loading positions...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Selected Publications Section -->
+      <section class="w-full px-4 md:px-40 py-12 bg-gray-50 dark:bg-gray-900/50" id="publikasi">
+        <div class="flex justify-center">
+          <div class="flex flex-col max-w-[960px] flex-1">
+            <div class="flex items-center gap-3 px-4 pb-6 pt-5">
+              <div class="h-8 w-1 bg-primary rounded-full"></div>
+              <h2 class="text-[#111418] dark:text-white text-[28px] font-bold leading-tight tracking-[-0.015em]">
+                Selected Publications
+              </h2>
+            </div>
+            <div id="publications-list" class="flex flex-col gap-4 px-4">
+              <!-- Publications will be loaded dynamically -->
+              <div class="text-center py-8 text-gray-500">
+                <span class="material-symbols-outlined text-4xl animate-spin">progress_activity</span>
+                <p class="mt-2">Loading publications...</p>
+              </div>
+            </div>
+            <div class="w-full flex justify-center mt-8">
+              <a id="scopus-link" href="#" target="_blank"
+                class="text-sm font-bold text-primary hover:text-blue-700 flex items-center gap-1 transition-colors">
+                View Full List on Scopus
+                <span class="material-symbols-outlined text-sm">open_in_new</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="w-full px-4 md:px-40 py-12 pb-24" id="kontak">
+        <div class="flex justify-center">
+          <div class="flex flex-col max-w-[960px] flex-1">
+            <div class="bg-primary/5 rounded-2xl p-8 md:p-12 overflow-hidden relative">
+              <!-- Decorative background elements -->
+              <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-blue-400/20 blur-3xl"></div>
+              <div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 rounded-full bg-purple-400/20 blur-3xl">
+              </div>
+              <div class="relative z-10 flex flex-col md:flex-row gap-8 items-center">
+                <div id="contact-info" class="flex-1 flex flex-col gap-6">
+                  <!-- Contact info loaded dynamically -->
+                </div>
+                <div id="map-container"
+                  class="w-full md:w-[400px] h-[300px] rounded-xl overflow-hidden shadow-lg relative">
+                  <!-- Map loaded dynamically -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-background-dark py-8 px-10">
+      <div class="flex flex-col items-center justify-center gap-4 text-center">
+        <p id="footer-copyright" class="text-sm text-gray-500 dark:text-gray-400">
+          © 2024 Prof. Drs. Dafik, M.Sc., Ph.D. Hak cipta dilindungi.
+        </p>
+        <div id="footer-links" class="flex gap-6">
+          <!-- Footer links loaded dynamically -->
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  
+    <script id="embedded-data">
+      window.__SITE_DATA__ = {
+  "bio": {
+    "nama_lengkap": "Prof. Drs. Dafik, M.Sc., Ph.D",
+    "nama_singkat": "Prof. Dafik",
+    "gelar_akademik": "Guru Besar",
+    "universitas": "Universitas Jember",
+    "foto_profil": "/profile_pic.png",
+    "badges": [
+      {
+        "text": "Guru Besar",
+        "color": "blue"
+      },
+      {
+        "text": "Ph.D, Australia",
+        "color": "green"
+      }
+    ],
+    "bidang_keahlian": [
+      {
+        "nama": "Combinatorics",
+        "warna": "primary"
+      },
+      {
+        "nama": "Graph Theory",
+        "warna": "purple"
+      },
+      {
+        "nama": "Network Topology",
+        "warna": "teal"
+      }
+    ],
+    "links": {
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=24281263600",
+      "google_scholar": "https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID",
+      "sinta": "https://sinta.kemdiktisaintek.go.id/authors/profile/5982062",
+      "researchgate": "#"
+    },
+    "cv_url": "#",
+    "bio_html": "<br>Prof. Dafik merupakan dosen matematika yang menamatkan pendidikan di FKIP UNEJ pada 1992. Kemudian melanjutkan studi di <strong>University of Manchester Institute of Science and Technology (UMIST)</strong> U.K Inggris tahun 1998. Sedangkan gelar Doktornya diperoleh dari <strong>School of Information and Technology and Mathematical Science (ITMS) University of Ballarat</strong>, Australia tahun 2007. Dan dianugerahi gelar <strong>Guru Besar pada tahun 2013</strong>.\r<br>"
+  },
+  "positions": [
+    {
+      "judul": "Dekan FMIPA",
+      "organisasi": "Universitas Jember",
+      "periode": "2023 - Sekarang",
+      "aktif": true,
+      "deskripsi": "Memimpin Fakultas Matematika dan Ilmu Pengetahuan Alam (<a href='https://fmipa.unej.ac.id/' target='_blank' class='text-indigo-600 hover:underline'>FMIPA</a>) dalam pengembangan akademik, penelitian, dan pengabdian masyarakat.",
+      "icon": "account_balance",
+      "warna": "indigo",
+      "gradient": "from-purple-500 to-indigo-500"
+    },
+    {
+      "judul": "Ketua CGANT",
+      "organisasi": "Research Group",
+      "periode": "2018 - Sekarang",
+      "aktif": true,
+      "deskripsi": "Memimpin Research Group Combinatorics, Graph Theory and Network Topology (<a href='https://cgant-unej.or.id/' target='_blank' class='text-teal-600 hover:underline'>CGANT</a>) dalam penelitian dan publikasi internasional.",
+      "icon": "hub",
+      "warna": "teal",
+      "gradient": "from-teal-400 to-emerald-500"
+    },
+    {
+      "judul": "Dekan FKIP",
+      "organisasi": "Universitas Jember",
+      "periode": "2016 - 2020",
+      "aktif": false,
+      "deskripsi": "Memimpin Fakultas Keguruan dan Ilmu Pendidikan (<a href='https://fkip.unej.ac.id/' target='_blank' class='text-rose-600 hover:underline'>FKIP</a>) dalam satu periode kepemimpinan penuh .",
+      "icon": "school",
+      "warna": "rose",
+      "gradient": "from-pink-500 to-rose-500"
+    }
+  ],
+  "contact": {
+    "judul": "Mari Berkolaborasi",
+    "deskripsi": "Saya selalu terbuka untuk mendiskusikan kolaborasi penelitian, undangan sebagai pembicara, dan kesempatan bimbingan mahasiswa.",
+    "kontak": {
+      "email": "d.dafik@unej.ac.id",
+      "kantor": "Gedung FMIPA, Universitas Jember",
+      "research_group": "CGANT - Universitas Jember",
+      "alamat_lengkap": "Jl. Kalimantan No.37, Jember, Jawa Timur"
+    },
+    "maps_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.3289!2d113.7166!3d-8.1653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd695b617d8f623%3A0x4027a76e3530c90!2sUniversitas%20Jember!5e0!3m2!1sen!2sid!4v1234567890",
+    "footer_links": {
+      "scopus": "https://www.scopus.com/authid/detail.uri?authorId=24281263600",
+      "google_scholar": "#",
+      "researchgate": "#",
+      "unej": "https://unej.ac.id"
+    }
+  },
+  "publications": [
+    {
+      "title": "On the local antimagic vertex coloring of corona product graphs",
+      "authors": "Dafik, Agustin, I.H., Hasan, M., Alfarisi, R., Prihandini, R.M.",
+      "year": "2024",
+      "type": "Journal",
+      "source": "Discrete Mathematics, Algorithms and Applications",
+      "doi": "10.1142/S1793830924500344",
+      "citations": 12
+    },
+    {
+      "title": "Rainbow connection number of graphs resulting from edge comb product",
+      "authors": "Dafik, Agustin, I.H., Fauziah, A., Alfarisi, R.",
+      "year": "2023",
+      "type": "Journal",
+      "source": "Electronic Journal of Graph Theory and Applications",
+      "doi": "10.5614/ejgta.2023.11.1.12",
+      "citations": 8
+    },
+    {
+      "title": "On super (a,d)-H-antimagic total covering of graphs",
+      "authors": "Dafik, Miller, M., Ryan, J., Bača, M.",
+      "year": "2023",
+      "type": "Journal",
+      "source": "AKCE International Journal of Graphs and Combinatorics",
+      "doi": "10.1080/09728600.2023.2169834",
+      "citations": 15
+    },
+    {
+      "title": "The locating chromatic number of certain graphs",
+      "authors": "Alfarisi, R., Dafik, Agustin, I.H., Kristiana, A.I.",
+      "year": "2022",
+      "type": "Journal",
+      "source": "Journal of Discrete Mathematical Sciences and Cryptography",
+      "doi": "10.1080/09720529.2022.2067853",
+      "citations": 21
+    },
+    {
+      "title": "On the partition dimension of a graph",
+      "authors": "Dafik, Agustin, I.H., Alfarisi, R., Kurniawati, E.Y.",
+      "year": "2022",
+      "type": "Conference",
+      "source": "AIP Conference Proceedings",
+      "doi": "10.1063/5.0096812",
+      "citations": 9
+    },
+    {
+      "title": "Super (a,d)-edge antimagic total labeling of connected graphs",
+      "authors": "Bača, M., Dafik, Miller, M., Ryan, J.",
+      "year": "2021",
+      "type": "Journal",
+      "source": "Ars Combinatoria",
+      "doi": null,
+      "citations": 45
+    },
+    {
+      "title": "On the rainbow vertex connection of graphs",
+      "authors": "Dafik, Agustin, I.H., Alfarisi, R., Kristiana, A.I., Albirri, E.R.",
+      "year": "2021",
+      "type": "Journal",
+      "source": "Far East Journal of Mathematical Sciences",
+      "doi": "10.17654/MS103010001",
+      "citations": 18
+    },
+    {
+      "title": "The metric dimension of graphs with pendant edges",
+      "authors": "Dafik, Alfarisi, R., Kristiana, A.I., Agustin, I.H.",
+      "year": "2020",
+      "type": "Journal",
+      "source": "Journal of Physics: Conference Series",
+      "doi": "10.1088/1742-6596/1538/1/012012",
+      "citations": 28
+    }
+  ]
+};
+    </script>
+  
+    <script>
+      // Load content from embedded data instead of API
+      async function loadAllContent() {
+        try {
+          const data = window.__SITE_DATA__;
+          renderBio(data.bio);
+          renderPositions(data.positions);
+          renderPublications(data.publications);
+          renderContact(data.contact);
+        } catch (error) {
+          console.error("Error loading content:", error);
+        }
+      }
+      
+      // Keep all render functions from original
+    
+</body>
+
+</html>

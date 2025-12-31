@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Prof. Drs. Dafik, M.Sc., Ph.D - Profil Akademik</title>
+  <meta name="description"
+    content="Profil akademik Prof. Drs. Dafik, M.Sc., Ph.D - Guru Besar Matematika, Dekan FMIPA UNEJ, Ketua Research Group CGANT" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#137fec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display">
+  <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] bg-white/90 backdrop-blur-md px-10 py-3 dark:border-b-gray-800 dark:bg-background-dark/90">
+      <div class="flex items-center gap-4 text-[#111418] dark:text-white">
+        <div class="size-8 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
+          <span class="material-symbols-outlined">school</span>
+        </div>
+        <h2 id="header-name" class="text-lg font-bold leading-tight tracking-[-0.015em]">
+          Prof. Dafik
+        </h2>
+      </div>
+      <div class="flex flex-1 justify-end gap-8">
+        <nav class="hidden md:flex items-center gap-9">
+          <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors"
+            href="#tentang">Tentang</a>
+          <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors"
+            href="#kepemimpinan">Kepemimpinan</a>
+          <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors"
+            href="#publikasi">Publikasi</a>
+          <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors"
+            href="#kontak">Kontak</a>
+        </nav>
+        <a id="cv-download-btn" href="#"
+          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-blue-600 transition-colors shadow-sm">
+          <span class="truncate">Unduh CV</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main class="layout-container flex h-full grow flex-col items-center">
+      <!-- Hero Section -->
+      <section class="w-full px-4 md:px-40 py-12 flex justify-center" id="tentang">
+        <div class="flex flex-col max-w-[960px] flex-1">
+          <div class="@container">
+            <div
+              class="flex flex-col gap-8 px-4 py-6 @[480px]:gap-12 @[864px]:flex-row items-center @[864px]:items-start">
+              <div class="relative group">
+                <div id="profile-photo"
+                  class="w-48 h-48 @[480px]:w-64 @[480px]:h-64 bg-top bg-no-repeat bg-cover rounded-full shadow-xl ring-4 ring-white dark:ring-gray-800 object-cover"
+                  alt="Foto Profil Prof. Dafik" style="background-image: url('/profile_pic.png')"></div>
+                <div
+                  class="absolute bottom-2 right-2 bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg text-primary">
+                  <span class="material-symbols-outlined text-2xl">verified</span>
+                </div>
+              </div>
+              <div class="flex flex-col gap-6 flex-1 text-center @[864px]:text-left justify-center">
+                <div class="flex flex-col gap-3">
+                  <div id="badges-container"
+                    class="inline-flex items-center justify-center @[864px]:justify-start gap-2 flex-wrap">
+                    <!-- Badges will be loaded dynamically -->
+                  </div>
+                  <h1 id="full-name"
+                    class="text-[#111418] dark:text-white text-3xl font-black leading-tight tracking-[-0.033em] @[480px]:text-4xl">
+                    <!-- Name loaded dynamically -->
+                  </h1>
+                  <h2 id="subtitle" class="text-gray-600 dark:text-gray-300 text-lg font-normal leading-relaxed">
+                    <!-- Subtitle loaded dynamically -->
+                  </h2>
+                </div>
+
+                <!-- Bio Section -->
+                <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-5 text-left">
+                  <p id="bio-content" class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                    <!-- Bio loaded dynamically -->
+                  </p>
+                </div>
+
+                <div class="flex flex-wrap gap-3 justify-center @[864px]:justify-start">
+                  <a href="#publikasi"
+                    class="flex min-w-[84px] cursor-pointer items-center justify-center gap-2 rounded-lg h-12 px-6 bg-primary text-white text-base font-bold hover:bg-blue-600 transition-all hover:scale-105 shadow-md">
+                    <span class="material-symbols-outlined text-[20px]">menu_book</span>
+                    <span class="truncate">Lihat Penelitian</span>
+                  </a>
+                  <a href="#kontak"
+                    class="flex min-w-[84px] cursor-pointer items-center justify-center gap-2 rounded-lg h-12 px-6 bg-white border border-gray-200 text-[#111418] text-base font-bold hover:bg-gray-50 transition-all hover:scale-105 shadow-sm dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700">
+                    <span class="material-symbols-outlined text-[20px]">mail</span>
+                    <span class="truncate">Hubungi Saya</span>
+                  </a>
+                </div>
+                <div id="social-links" class="flex gap-4 justify-center @[864px]:justify-start mt-2">
+                  <!-- Social links loaded dynamically -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Leadership & Service Section -->
+      <section class="w-full px-4 md:px-40 py-8 bg-white dark:bg-background-dark" id="kepemimpinan">
+        <div class="flex justify-center">
+          <div class="flex flex-col max-w-[960px] flex-1">
+            <div class="flex items-center gap-3 px-4 pb-6 pt-5">
+              <div class="h-8 w-1 bg-purple-500 rounded-full"></div>
+              <h2 class="text-[#111418] dark:text-white text-[28px] font-bold leading-tight tracking-[-0.015em]">
+                Kepemimpinan & Jabatan
+              </h2>
+            </div>
+            <div id="positions-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+              <!-- Positions will be loaded dynamically -->
+              <div class="text-center py-8 text-gray-500 col-span-full">
+                <span class="material-symbols-outlined text-4xl animate-spin">progress_activity</span>
+                <p class="mt-2">Loading positions...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Selected Publications Section -->
+      <section class="w-full px-4 md:px-40 py-12 bg-gray-50 dark:bg-gray-900/50" id="publikasi">
+        <div class="flex justify-center">
+          <div class="flex flex-col max-w-[960px] flex-1">
+            <div class="flex items-center gap-3 px-4 pb-6 pt-5">
+              <div class="h-8 w-1 bg-primary rounded-full"></div>
+              <h2 class="text-[#111418] dark:text-white text-[28px] font-bold leading-tight tracking-[-0.015em]">
+                Selected Publications
+              </h2>
+            </div>
+            <div id="publications-list" class="flex flex-col gap-4 px-4">
+              <!-- Publications will be loaded dynamically -->
+              <div class="text-center py-8 text-gray-500">
+                <span class="material-symbols-outlined text-4xl animate-spin">progress_activity</span>
+                <p class="mt-2">Loading publications...</p>
+              </div>
+            </div>
+            <div class="w-full flex justify-center mt-8">
+              <a id="scopus-link" href="#" target="_blank"
+                class="text-sm font-bold text-primary hover:text-blue-700 flex items-center gap-1 transition-colors">
+                View Full List on Scopus
+                <span class="material-symbols-outlined text-sm">open_in_new</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="w-full px-4 md:px-40 py-12 pb-24" id="kontak">
+        <div class="flex justify-center">
+          <div class="flex flex-col max-w-[960px] flex-1">
+            <div class="bg-primary/5 rounded-2xl p-8 md:p-12 overflow-hidden relative">
+              <!-- Decorative background elements -->
+              <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-blue-400/20 blur-3xl"></div>
+              <div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 rounded-full bg-purple-400/20 blur-3xl">
+              </div>
+              <div class="relative z-10 flex flex-col md:flex-row gap-8 items-center">
+                <div id="contact-info" class="flex-1 flex flex-col gap-6">
+                  <!-- Contact info loaded dynamically -->
+                </div>
+                <div id="map-container"
+                  class="w-full md:w-[400px] h-[300px] rounded-xl overflow-hidden shadow-lg relative">
+                  <!-- Map loaded dynamically -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-background-dark py-8 px-10">
+      <div class="flex flex-col items-center justify-center gap-4 text-center">
+        <p id="footer-copyright" class="text-sm text-gray-500 dark:text-gray-400">
+          © 2024 Prof. Drs. Dafik, M.Sc., Ph.D. Hak cipta dilindungi.
+        </p>
+        <div id="footer-links" class="flex gap-6">
+          <!-- Footer links loaded dynamically -->
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // ========================================================================
+    // LOAD ALL CONTENT FROM API
+    // ========================================================================
+
+    async function loadAllContent() {
+      try {
+        const response = await fetch("/api/content");
+        const data = await response.json();
+
+        renderBio(data.bio);
+        renderPositions(data.positions);
+        renderPublications(data.publications);
+        renderContact(data.contact);
+      } catch (error) {
+        console.error("Error loading content:", error);
+      }
+    }
+
+    // ========================================================================
+    // RENDER FUNCTIONS
+    // ========================================================================
+
+    function renderBio(bio) {
+      if (!bio) return;
+
+      // Header name
+      const headerName = document.getElementById("header-name");
+      if (headerName && bio.nama_singkat) {
+        headerName.textContent = bio.nama_singkat;
+      }
+
+      // Full name
+      const fullName = document.getElementById("full-name");
+      if (fullName && bio.nama_lengkap) {
+        fullName.textContent = bio.nama_lengkap;
+      }
+
+      // Profile photo
+      const profilePhoto = document.getElementById("profile-photo");
+      if (profilePhoto && bio.foto_profil) {
+        profilePhoto.style.backgroundImage = `url('${bio.foto_profil}')`;
+      }
+
+      // CV download button
+      const cvBtn = document.getElementById("cv-download-btn");
+      if (cvBtn && bio.cv_url) {
+        cvBtn.href = bio.cv_url;
+      }
+
+      // Badges
+      const badgesContainer = document.getElementById("badges-container");
+      if (badgesContainer && bio.badges) {
+        badgesContainer.innerHTML = bio.badges
+          .map((badge) => {
+            const colorMap = {
+              blue: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
+              green:
+                "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
+              purple:
+                "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
+              red: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
+            };
+            const colorClass = colorMap[badge.color] || colorMap.blue;
+            return `<span class="px-3 py-1 rounded-full ${colorClass} text-xs font-bold uppercase tracking-wider">${badge.text}</span>`;
+          })
+          .join("");
+      }
+
+      // Subtitle with expertise
+      const subtitle = document.getElementById("subtitle");
+      if (subtitle && bio.universitas) {
+        let expertiseHtml = "";
+        if (bio.bidang_keahlian) {
+          const colorMap = {
+            primary: "text-primary",
+            purple: "text-purple-600",
+            teal: "text-teal-600",
+          };
+          expertiseHtml = bio.bidang_keahlian
+            .map((exp, i) => {
+              const colorClass = colorMap[exp.warna] || "text-primary";
+              const separator =
+                i < bio.bidang_keahlian.length - 1
+                  ? i === bio.bidang_keahlian.length - 2
+                    ? ", dan "
+                    : ", "
+                  : "";
+              return `<span class="${colorClass} font-medium">${exp.nama}</span>${separator}`;
+            })
+            .join("");
+        }
+        subtitle.innerHTML = `Guru Besar Matematika di ${bio.universitas}.<br class="hidden @[864px]:block" />Ahli dalam bidang ${expertiseHtml}.`;
+      }
+
+      // Bio content
+      const bioContent = document.getElementById("bio-content");
+      if (bioContent && bio.bio_html) {
+        bioContent.innerHTML = bio.bio_html;
+      }
+
+      // Social links
+      const socialLinks = document.getElementById("social-links");
+      if (socialLinks && bio.links) {
+        socialLinks.innerHTML = `
+            ${bio.links.scopus
+            ? `
+            <a class="text-gray-400 hover:text-orange-500 transition-colors" href="${bio.links.scopus}" target="_blank" title="Scopus">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.182c5.423 0 9.818 4.395 9.818 9.818S17.423 21.818 12 21.818 2.182 17.423 2.182 12 6.577 2.182 12 2.182zm-2.4 5.236c-1.8 0-2.945 1.09-2.945 2.618 0 1.31.873 2.182 2.509 2.509l.982.218c.873.218 1.2.545 1.2 1.091 0 .655-.545 1.091-1.527 1.091-.982 0-1.636-.436-1.745-1.2H6.327c.109 1.636 1.31 2.727 3.273 2.727 1.909 0 3.164-1.091 3.164-2.727 0-1.309-.873-2.073-2.509-2.4l-.982-.218c-.873-.218-1.2-.545-1.2-1.091 0-.655.545-1.091 1.418-1.091.873 0 1.418.436 1.527 1.091h1.745c-.109-1.527-1.309-2.618-3.163-2.618z"/>
+              </svg>
+            </a>`
+            : ""
+          }
+            ${bio.links.google_scholar
+            ? `
+            <a class="text-gray-400 hover:text-green-600 transition-colors" href="${bio.links.google_scholar}" target="_blank" title="Google Scholar">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
+              </svg>
+            </a>`
+            : ""
+          }
+            ${bio.links.sinta
+            ? `
+            <a class="text-gray-400 hover:text-blue-600 transition-colors" href="${bio.links.sinta}" target="_blank" title="SINTA">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" transform="scale(0.8) translate(3,3)" fill-opacity="0" stroke="currentColor" stroke-width="2"/>
+               <text x="12" y="17" font-family="serif" font-weight="bold" font-size="16" text-anchor="middle" fill="currentColor">S</text>
+              </svg>
+            </a>`
+            : ""
+          }
+          `;
+      }
+
+      // Scopus link
+      const scopusLink = document.getElementById("scopus-link");
+      if (scopusLink && bio.links && bio.links.scopus) {
+        scopusLink.href = bio.links.scopus;
+      }
+    }
+
+    function renderPositions(positions) {
+      const container = document.getElementById("positions-list");
+
+      if (!positions || positions.length === 0) {
+        container.innerHTML =
+          '<p class="text-gray-500 text-center py-8 col-span-full">No positions found.</p>';
+        return;
+      }
+
+      container.innerHTML = positions
+        .map((pos) => {
+          const colorMap = {
+            indigo: {
+              bg: "indigo-50",
+              text: "indigo-600",
+              darkBg: "indigo-900/30",
+              darkText: "indigo-300",
+            },
+            teal: {
+              bg: "teal-50",
+              text: "teal-600",
+              darkBg: "teal-900/30",
+              darkText: "teal-300",
+            },
+            rose: {
+              bg: "rose-50",
+              text: "rose-600",
+              darkBg: "rose-900/30",
+              darkText: "rose-300",
+            },
+            purple: {
+              bg: "purple-50",
+              text: "purple-600",
+              darkBg: "purple-900/30",
+              darkText: "purple-300",
+            },
+            blue: {
+              bg: "blue-50",
+              text: "blue-600",
+              darkBg: "blue-900/30",
+              darkText: "blue-300",
+            },
+          };
+          const color = colorMap[pos.warna] || colorMap.indigo;
+
+          return `
+              <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+                <div class="h-2 w-full bg-gradient-to-r ${pos.gradient || "from-purple-500 to-indigo-500"
+            }"></div>
+                <div class="p-6 flex flex-col h-full justify-between">
+                  <div>
+                    <div class="mb-4 p-3 bg-${color.bg} dark:bg-${color.darkBg
+            } w-fit rounded-lg text-${color.text} dark:text-${color.darkText}">
+                      <span class="material-symbols-outlined text-3xl">${pos.icon || "work"
+            }</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">${pos.judul
+            }</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 font-medium mb-4">${pos.organisasi
+            }</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">${pos.deskripsi
+            }</p>
+                  </div>
+                  <div class="mt-6 pt-4 border-t border-gray-100 dark:border-gray-700">
+                    <span class="text-xs font-bold uppercase tracking-wider text-${color.text
+            }">${pos.periode}</span>
+                  </div>
+                </div>
+              </div>
+            `;
+        })
+        .join("");
+    }
+
+    function renderPublications(publications) {
+      const container = document.getElementById("publications-list");
+
+      if (!publications || publications.length === 0) {
+        container.innerHTML =
+          '<p class="text-gray-500 text-center py-8">No publications found.</p>';
+        return;
+      }
+
+      const colors = [
+        "primary",
+        "purple-500",
+        "teal-500",
+        "rose-500",
+        "amber-500",
+      ];
+
+      container.innerHTML = publications
+        .map((pub, index) => {
+          const color = colors[index % colors.length];
+          const typeColors = {
+            Journal: {
+              bg: "blue-100",
+              text: "blue-700",
+              darkBg: "blue-900",
+              darkText: "blue-200",
+            },
+            Conference: {
+              bg: "purple-100",
+              text: "purple-700",
+              darkBg: "purple-900",
+              darkText: "purple-200",
+            },
+            "Book Chapter": {
+              bg: "teal-100",
+              text: "teal-700",
+              darkBg: "teal-900",
+              darkText: "teal-200",
+            },
+          };
+          const typeColor = typeColors[pub.type] || typeColors["Journal"];
+
+          return `
+              <article class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border-l-4 border-${color} hover:shadow-md transition-shadow">
+                <div class="flex flex-col gap-2">
+                  <div class="flex flex-wrap items-center gap-2 mb-1">
+                    <span class="px-2 py-1 text-xs font-bold bg-${typeColor.bg
+            } text-${typeColor.text} dark:bg-${typeColor.darkBg
+            } dark:text-${typeColor.darkText} rounded">${pub.type || "Article"
+            }</span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">${pub.year || ""
+            }</span>
+                    ${pub.citations
+              ? `<span class="text-sm text-gray-400"><span class="material-symbols-outlined text-xs align-middle">format_quote</span> ${pub.citations} citations</span>`
+              : ""
+            }
+                  </div>
+                  <h3 class="text-lg font-bold text-gray-900 dark:text-white hover:text-primary cursor-pointer transition-colors">${pub.title
+            }</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-300">${pub.authors
+            }</p>
+                  <p class="text-sm italic text-gray-500">${pub.source || ""
+            }</p>
+                  ${pub.doi
+              ? `
+                  <div class="flex gap-4 mt-3">
+                    <a class="flex items-center gap-1 text-sm font-medium text-primary hover:underline" href="https://doi.org/${pub.doi}" target="_blank">
+                      <span class="material-symbols-outlined text-base">link</span> DOI
+                    </a>
+                  </div>
+                  `
+              : ""
+            }
+                </div>
+              </article>
+            `;
+        })
+        .join("");
+    }
+
+    function renderContact(contact) {
+      if (!contact) return;
+
+      const contactInfo = document.getElementById("contact-info");
+      if (contactInfo) {
+        contactInfo.innerHTML = `
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white">${contact.judul || "Mari Berkolaborasi"
+          }</h2>
+            <p class="text-gray-600 dark:text-gray-300 text-lg">${contact.deskripsi || ""
+          }</p>
+            <div class="flex flex-col gap-4 mt-4">
+              ${contact.kontak?.email
+            ? `
+              <div class="flex items-center gap-3">
+                <div class="size-10 rounded-full bg-white dark:bg-gray-800 shadow-sm flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined">mail</span>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Email</p>
+                  <a class="text-base font-bold text-gray-900 dark:text-white hover:text-primary transition-colors" href="mailto:${contact.kontak.email}">${contact.kontak.email}</a>
+                </div>
+              </div>
+              `
+            : ""
+          }
+              ${contact.kontak?.kantor
+            ? `
+              <div class="flex items-center gap-3">
+                <div class="size-10 rounded-full bg-white dark:bg-gray-800 shadow-sm flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined">location_on</span>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Kantor</p>
+                  <p class="text-base font-bold text-gray-900 dark:text-white">${contact.kontak.kantor}</p>
+                </div>
+              </div>
+              `
+            : ""
+          }
+              ${contact.kontak?.research_group
+            ? `
+              <div class="flex items-center gap-3">
+                <div class="size-10 rounded-full bg-white dark:bg-gray-800 shadow-sm flex items-center justify-center text-primary">
+                  <span class="material-symbols-outlined">groups</span>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Research Group</p>
+                  <p class="text-base font-bold text-gray-900 dark:text-white">${contact.kontak.research_group}</p>
+                </div>
+              </div>
+              `
+            : ""
+          }
+            </div>
+          `;
+      }
+
+      const mapContainer = document.getElementById("map-container");
+      if (mapContainer && contact.maps_embed) {
+        mapContainer.innerHTML = `
+            <iframe
+              src="${contact.maps_embed}"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="absolute bottom-4 left-4 right-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur px-4 py-3 rounded-lg shadow-sm">
+              <p class="text-xs font-bold uppercase text-gray-500 mb-1">Universitas Jember</p>
+              <p class="text-sm font-semibold text-gray-900 dark:text-white">${contact.kontak?.alamat_lengkap || ""
+          }</p>
+            </div>
+          `;
+      }
+
+      // Footer links
+      const footerLinks = document.getElementById("footer-links");
+      if (footerLinks && contact.footer_links) {
+        footerLinks.innerHTML = `
+            ${contact.footer_links.scopus
+            ? `<a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="${contact.footer_links.scopus}" target="_blank">Scopus</a>`
+            : ""
+          }
+            ${contact.footer_links.google_scholar
+            ? `<a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="${contact.footer_links.google_scholar}">Google Scholar</a>`
+            : ""
+          }
+            ${contact.footer_links.researchgate
+            ? `<a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="${contact.footer_links.researchgate}">ResearchGate</a>`
+            : ""
+          }
+            ${contact.footer_links.unej
+            ? `<a class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="${contact.footer_links.unej}" target="_blank">UNEJ</a>`
+            : ""
+          }
+          `;
+      }
+    }
+
+    // Load content on page load
+    document.addEventListener("DOMContentLoaded", loadAllContent);
+  </script>
+</body>
+
+</html>

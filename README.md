@@ -1,0 +1,1 @@
+Prof. Drs. Dafik, M.Sc., Ph.D. All rights reserved.
