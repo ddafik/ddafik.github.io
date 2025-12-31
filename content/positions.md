@@ -1,44 +1,44 @@
 ---
-# Kepemimpinan & Jabatan / Leadership & Positions
+# Leadership & Positions
 jabatan:
-  - judul: "Dekan FMIPA"
-    organisasi: "Universitas Jember"
-    periode: "2023 - Sekarang"
+  - judul: "Dean of FMIPA"
+    organisasi: "University of Jember"
+    periode: "2023 - Present"
     aktif: true
-    deskripsi: "Memimpin Fakultas Matematika dan Ilmu Pengetahuan Alam (<a href='https://fmipa.unej.ac.id/' target='_blank' class='text-indigo-600 hover:underline'>FMIPA</a>) dalam pengembangan akademik, penelitian, dan pengabdian masyarakat."
+    deskripsi: "Leading the Faculty of Mathematics and Natural Sciences (<a href='https://fmipa.unej.ac.id/' target='_blank' class='text-indigo-600 hover:underline'>FMIPA</a>) in academic development, research, and community service."
     icon: "account_balance"
     warna: "indigo"
     gradient: "from-purple-500 to-indigo-500"
 
-  - judul: "Ketua CGANT"
+  - judul: "Head of CGANT"
     organisasi: "Research Group"
-    periode: "2018 - Sekarang"
+    periode: "2018 - Present"
     aktif: true
-    deskripsi: "Memimpin Research Group Combinatorics, Graph Theory and Network Topology (<a href='https://cgant-unej.or.id/' target='_blank' class='text-teal-600 hover:underline'>CGANT</a>) dalam penelitian dan publikasi internasional."
+    deskripsi: "Leading the Combinatorics, Graph Theory and Network Topology Research Group (<a href='https://cgant-unej.or.id/' target='_blank' class='text-teal-600 hover:underline'>CGANT</a>) in research and international publications."
     icon: "hub"
     warna: "teal"
     gradient: "from-teal-400 to-emerald-500"
 
-  - judul: "Dekan FKIP"
-    organisasi: "Universitas Jember"
+  - judul: "Dean of FKIP"
+    organisasi: "University of Jember"
     periode: "2016 - 2020"
     aktif: false
-    deskripsi: "Memimpin Fakultas Keguruan dan Ilmu Pendidikan (<a href='https://fkip.unej.ac.id/' target='_blank' class='text-rose-600 hover:underline'>FKIP</a>) dalam satu periode kepemimpinan penuh ."
+    deskripsi: "Led the Faculty of Teacher Training and Education (<a href='https://fkip.unej.ac.id/' target='_blank' class='text-rose-600 hover:underline'>FKIP</a>) for a full leadership term."
     icon: "school"
     warna: "rose"
     gradient: "from-pink-500 to-rose-500"
 
-  # Tambahkan jabatan lain di bawah ini dengan format yang sama
-  # - judul: "Nama Jabatan"
-  #   organisasi: "Nama Organisasi"
+  # Add other positions below with the same format
+  # - judul: "Position Title"
+  #   organisasi: "Organization Name"
   #   periode: "xxxx - xxxx"
   #   aktif: true/false
-  #   deskripsi: "Deskripsi singkat"
-  #   icon: "nama_icon_material"
-  #   warna: "nama_warna"
+  #   deskripsi: "Short description"
+  #   icon: "icon_name_material"
+  #   warna: "color_name"
   #   gradient: "from-xxx to-xxx"
 ---
 
-# Catatan Tambahan
+# Additional Notes
 
-Bagian ini bisa digunakan untuk catatan tambahan tentang kepemimpinan dan jabatan yang pernah dijabat.
+This section can be used for additional notes about leadership and positions held.

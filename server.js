@@ -443,7 +443,7 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`\n🎓 Website Prof. Dafik berjalan di:`);
+  console.log(`\n🎓 Prof. Dafik Website is running at:`);
   console.log(`   http://localhost:${PORT}`);
   console.log(`\n📁 Content files location: ${CONTENT_DIR}`);
   console.log(`   - bio.md`);

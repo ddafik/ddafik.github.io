@@ -1,19 +1,19 @@
 ---
-# Personal Information / Informasi Pribadi
+# Personal Information
 nama_lengkap: "Prof. Drs. Dafik, M.Sc., Ph.D"
 nama_singkat: "Prof. Dafik"
-gelar_akademik: "Guru Besar"
-universitas: "Universitas Jember"
+gelar_akademik: "Professor"
+universitas: "University of Jember"
 foto_profil: "profile_pic.png"
 
-# Badges / Label
+# Badges
 badges:
-  - text: "Guru Besar"
+  - text: "Professor"
     color: "blue"
   - text: "Ph.D, Australia"
     color: "green"
 
-# Research Expertise / Bidang Keahlian
+# Research Expertise
 bidang_keahlian:
   - nama: "Combinatorics"
     warna: "primary"
@@ -33,4 +33,4 @@ links:
 cv_url: "#"
 ---
 
-Prof. Dafik merupakan dosen matematika yang menamatkan pendidikan di FKIP UNEJ pada 1992. Kemudian melanjutkan studi di **University of Manchester Institute of Science and Technology (UMIST)** U.K Inggris tahun 1998. Sedangkan gelar Doktornya diperoleh dari **School of Information and Technology and Mathematical Science (ITMS) University of Ballarat**, Australia tahun 2007. Dan dianugerahi gelar **Guru Besar pada tahun 2013**.
+Prof. Dafik is a mathematics lecturer who completed his education at FKIP UNEJ in 1992. He then continued his studies at the **University of Manchester Institute of Science and Technology (UMIST)**, UK in 1998. He obtained his Doctorate degree from the **School of Information and Technology and Mathematical Science (ITMS) University of Ballarat**, Australia in 2007. He was awarded the title of **Professor in 2013**.
