@@ -15,7 +15,7 @@ maps_embed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.3289!2d1
 # Footer Links
 footer_links:
   scopus: "https://www.scopus.com/authid/detail.uri?authorId=24281263600"
-  google_scholar: "#"
+  google_scholar: "https://scholar.google.com/citations?user=ZSboGXkAAAAJ&hl=en&oi=ao"
   researchgate: "#"
   unej: "https://unej.ac.id"
 ---
