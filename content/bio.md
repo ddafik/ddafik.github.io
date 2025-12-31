@@ -25,7 +25,7 @@ bidang_keahlian:
 # Social/Academic Links
 links:
   scopus: "https://www.scopus.com/authid/detail.uri?authorId=24281263600"
-  google_scholar: "https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID"
+  google_scholar: "https://scholar.google.com/citations?user=ZSboGXkAAAAJ&hl=en&oi=ao"
   sinta: "https://sinta.kemdiktisaintek.go.id/authors/profile/5982062"
   researchgate: "#"
 
